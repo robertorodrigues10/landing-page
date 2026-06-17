@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Restaurante Fictício</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="home.html">
+            <img src="img/VEGANAGEM-LOGO.png" alt="logo" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="sobre.html">SOBRE</a></li>
+              <li class="nav-item"><a class="nav-link" href="cardapio.html">CARDÁPIO</a></li>
+              <li class="nav-item"><a class="nav-link" href="contato.html">CONTATO</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control search"
+                type="search"
+                placeholder="PESQUISAR"
+                aria-label="Pesquisar"
+              />
+              <button class="btn search-btn ms-2" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container py-5">
+      <section class="contact-section rounded-4" data-aos="fade-up" data-aos-duration="1400">
+        <div class="contact-inner">
+          <h1 class="text-center text-white mb-4">Entre em Contato</h1>
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1600">
+            <div class="col-lg-8">
+              <form id="contact-form" class="contact-form" data-email-subject="Contato - Restaurante Fictício">
+                <div class="mb-3 mt-3">
+                  <label for="nome" class="form-label">Nome:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    name="nome"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Digite seu email"
+                    name="email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensagem" class="form-label">Mensagem:</label>
+                  <textarea
+                    class="form-control"
+                    id="mensagem"
+                    rows="4"
+                    placeholder="Escreva sua mensagem"
+                    name="mensagem"
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-send">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-light">
+      <div class="text-center p-3">
+        © 2026 Veganagem - Todos os direitos reservados.
+        
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

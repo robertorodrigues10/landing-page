@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio - Restaurante Fictício</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="cardapio-page">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="home.html">
+            <img src="img/VEGANAGEM-LOGO.png" alt="logo" class="logo-img" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="sobre.html">SOBRE</a></li>
+              <li class="nav-item"><a class="nav-link" href="cardapio.html">CARDÁPIO</a></li>
+              <li class="nav-item"><a class="nav-link" href="contato.html">CONTATO</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control search"
+                type="search"
+                placeholder="PESQUISAR"
+                aria-label="Pesquisar"
+              />
+              <button class="btn search-btn ms-2" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container py-5 menu-section">
+      <div class="text-center mb-5">
+        <h1>Cardápio</h1>
+        <p class="menu-description">Descubra nossos três pratos veganos exclusivos, preparados com ingredientes frescos e muito sabor.</p>
+      </div>
+      <div class="order-actions text-center mb-4">
+        <div class="row g-2 justify-content-center mb-3 order-delivery-info">
+          <div class="col-sm-6 col-md-4">
+            <label class="visually-hidden" for="order-name">Nome para entrega</label>
+            <input id="order-name" type="text" class="form-control" placeholder="Nome para entrega" />
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <label class="visually-hidden" for="order-address">Endereço de entrega</label>
+            <input id="order-address" type="text" class="form-control" placeholder="Endereço de entrega" />
+          </div>
+        </div>
+        <button id="send-order" type="button" class="btn btn-success btn-lg">Enviar pedido para o Gmail</button>
+        <p id="order-summary" class="text-white mt-3 mb-0">Escolha as quantidades, informe nome e endereço, e envie seu pedido.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="dish-card" data-aos="fade-up" data-aos-duration="1500" data-name="Hambúrguer Verde" data-price="28.00">
+            <div class="dish-image">
+              <img src="img/Hambúrguer-Verde.jpg" alt="Hambúrguer Verde" class="img-fluid" />
+            </div>
+            <div class="dish-content">
+              <div class="dish-badge">01</div>
+              <h3>Hambúrguer Verde</h3>
+              <p>Hambúrguer de grão-de-bico e beterraba, servido no pão artesanal com alface, tomate e molho especial de ervas.</p>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">R$ 28,00</span>
+              <div class="dish-actions">
+                <button type="button" class="btn btn-outline-light btn-sm qty-decrease">-</button>
+                <label class="visually-hidden" for="quantidade-hamburguer">Quantidade</label>
+                <input id="quantidade-hamburguer" type="number" min="0" value="0" class="form-control form-control-sm dish-quantity" />
+                <button type="button" class="btn btn-outline-light btn-sm qty-increase">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="dish-card" data-aos="fade-up" data-aos-duration="1700" data-name="Risoto de Cogumelos" data-price="34.00">
+            <div class="dish-image">
+              <img src="img/Risoto-de-Cogumelos.jpg" alt="Risoto de Cogumelos" class="img-fluid" />
+            </div>
+            <div class="dish-content">
+              <div class="dish-badge">02</div>
+              <h3>Risoto de Cogumelos</h3>
+              <p>Risoto cremoso com mix de cogumelos, alho-poró e parmesão vegano, finalizado com azeite trufado.</p>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">R$ 34,00</span>
+              <div class="dish-actions">
+                <button type="button" class="btn btn-outline-light btn-sm qty-decrease">-</button>
+                <label class="visually-hidden" for="quantidade-risoto">Quantidade</label>
+                <input id="quantidade-risoto" type="number" min="0" value="0" class="form-control form-control-sm dish-quantity" />
+                <button type="button" class="btn btn-outline-light btn-sm qty-increase">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="dish-card" data-aos="fade-up" data-aos-duration="1900" data-name="Taco de Jaca" data-price="26.00">
+            <div class="dish-image">
+              <img src="img/Taco-de-Jaca.jpg" alt="Taco de Jaca" class="img-fluid" />
+            </div>
+            <div class="dish-content">
+              <div class="dish-badge">03</div>
+              <h3>Taco de Jaca</h3>
+              <p>Taco recheado com jaca temperada, guacamole, pico de gallo e creme de caju, servido em tortillas artesanais.</p>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">R$ 26,00</span>
+              <div class="dish-actions">
+                <button type="button" class="btn btn-outline-light btn-sm qty-decrease">-</button>
+                <label class="visually-hidden" for="quantidade-taco">Quantidade</label>
+                <input id="quantidade-taco" type="number" min="0" value="0" class="form-control form-control-sm dish-quantity" />
+                <button type="button" class="btn btn-outline-light btn-sm qty-increase">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light">
+      <div class="text-center p-3">
+        © 2026 Veganagem - Todos os direitos reservados.
+
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./script.js?v=2" defer></script>
+  </body>
+</html>
